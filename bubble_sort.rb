@@ -3,12 +3,12 @@ def bubble_sort(arr)
   passes = 0
   until passes >= len - 1
     # each pass through, need to check one fewer element
-    for i in (0..(len - 2 - passes))
+    (len - 1 - passes).times do |i|
       if arr[i] > arr[i+1]
         arr[i], arr[i+1] = arr[i+1], arr[i]
       end
-      return arr if is_sorted?(arr)
     end
+    return arr if is_sorted?(arr)
     passes += 1
   end
   arr
