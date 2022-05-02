@@ -22,3 +22,7 @@ def is_sorted?(arr)
   arr.each_cons(2).all? { |a, b| a <= b }
 end
 
+p "Enter an array of integers separated by spaces"
+array = gets.chomp.split(" ").compact.map { |n| n = n.to_i }
+p "Input array: #{array}"
+p "Sorted array: #{bubble_sort(array)}"
