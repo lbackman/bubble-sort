@@ -6,14 +6,10 @@ def bubble_sort(arr)
     for i in (0..(len - 2 - passes))
       if arr[i] > arr[i+1]
         arr[i], arr[i+1] = arr[i+1], arr[i]
-        # p arr
-        # p "passes is #{passes}"
-        # p "index is #{i}"
       end
       return arr if is_sorted?(arr)
     end
     passes += 1
-    # p "passes after incrementing is #{passes}"
   end
   arr
 end
