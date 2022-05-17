@@ -8,7 +8,7 @@ def bubble_sort(arr)
     (len - 1 - passes).times do |i|
       arr[i], arr[i + 1] = arr[i + 1], arr[i] if arr[i] > arr[i + 1]
     end
-    return arr if sorted?(arr)
+    return arr if sorted?(arr[0..-(passes + 2)])
     passes += 1
   end
   arr
